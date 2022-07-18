@@ -255,3 +255,27 @@
 // }
 
 // LIFECYCLE OF A REACT COMPONENT 
+import React, {useState, useEffect} from 'react';
+// import './App.css';
+
+const App = () => {
+    const [count, setCount] = useState(0);
+
+    // ComponentDidMount
+// useEffect(() => {
+// console.log("The use effect ran")
+//     }, []);
+
+// ComponentDidUpdate
+useEffect(() => {
+    }, [count]);
+
+    return (
+        <div>
+        <h6>Counter</h6>
+        <p>current count: {count} </p>
+        <button onClick={() => setCount(count +1)}>Increment the count</button>
+        </div>
+    );
+};
+export default App;
